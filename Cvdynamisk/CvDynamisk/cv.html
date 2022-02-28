@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mitt CV</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+ 
+</head>
+<body id="grad">
+ 
+  <div class="resume">
+    <div class="resumeleft">
+      <div class="resumeprofile">
+        <h1>Jeremy Cedendahl</h1>
+      <h2><img src="qwe.png"></h2>
+      <div class="vertical-menu">
+        <a href="start.html" >Home</a>
+        <a href="ommig.html">Om mig</a>
+        <a href="cv.html" class="active">CV</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="ovrigt.html">Övrigt</a>  
+    </div>
+    <p><img src="icon.png" class="icon"></p>
+      </div>
+    </div>
+    <div class="resumeright">
+      <!-- Lägg till Text och saker till höger-->  
+        <h2 class="bold">Cv</h1>
+          <br>
+          <h3 class="bold">Utbildningar:</h2>
+            <h4 class="bold">Avslutad, Bromangymnasiet, Hudiksvall 2009-2012</h4>
+            <p>Estetiska programmet, inriktning musik, .
+               Där ingick ämnen som datakunskap, arbetsmiljö och säkerhet,
+               ljudteknik och mycket mera.
+               Vi åkte runt mycket och spelade för olika människor så man fick lära
+               sig att bemöta nya människor och anpassa mig för olika situationer.</p>
+               <br>
+               <h4 class="bold">Pågående, Edugrade, Hudiksvall 2021-2023</h4>
+               <p>Systemutvecklare med ai kompetens,. Studerar flera språk, lär sig både frontend och backend.</p>
+                    </p>
+                    <h3>Arbetslivserfarenheter:</h3>
+                    <div id="new">
+                    </div>
+
+                        <ui>
+                        </ui>
+
+
+    </div>
+  </div>
+  <script>
+    
+    fetch("/data.json")
+    .then(response => {
+      if(!response.ok){
+        throw new Error(respone.status)
+      }
+      return response.json()
+    })
+    .then(json => 
+    {
+      
+      for(i = 0; i < json.companies.length; i++){
+     console.log(json.companies[i])
+     var tag = document.createElement("p");
+     var text = document.createTextNode(json.companies[i].companyName + ": " + json.companies[i].city + ": " + json.companies[i].duration + "\n" + json.companies[i].description);
+      tag.appendChild(text);
+      var element = document.getElementById("new");
+      element.appendChild(tag);
+    }
+    })
+   
+    </script>
+</body>
+</html>

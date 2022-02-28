@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mitt CV</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body id="grad">
+    <div class="resume">
+      <div class="resumeleft">
+        <div class="resumeprofile">
+          <h1>Jeremy Cedendahl</h1>
+          <h2><img src="qwe.png" /></h2>
+          <div class="vertical-menu">
+            <a href="start.html" class="active">Home</a>
+            <a href="ommig.html">Om mig</a>
+            <a href="cv.html">CV</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="ovrigt.html">Övrigt</a>
+          </div>
+          <p><img src="icon.png" class="icon" /></p>
+        </div>
+      </div>
+      <div class="resumeright">
+        <!-- Lägg till Text och saker till höger-->
+        <ui>
+          <li class="home">Namn: Keith Anthony Jeremy Cedendahl</li>
+          <li class="home">Adress: Forsavägen 18 82065 Forsa</li>
+          <li class="home">Födelsedatum: 1993-03-26</li>
+          <li class="home">Mobil: 0702556191</li>
+          <li class="home">E-post Jeremy.cedendahl@edu.edugrade.se</li>
+        </ui>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          'use strict';
+      
+          let buffer = "";
+      
+          document.addEventListener('keydown', event => {
+              const charList = 'abcdefghijklmnopqrstuvwxyz0123456789';
+              const key = event.key.toLowerCase();
+      
+              // we are only interested in alphanumeric keys
+              if (charList.indexOf(key) === -1) return;
+      
+              buffer += key;
+              console.log(buffer);
+      
+              if(buffer.includes("1337")){
+              alert("Elite")
+              }
+          });
+      });
+      </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mitt CV</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body id="grad">
+    <div class="resume">
+      <div class="resumeleft">
+        <div class="resumeprofile">
+          <h1>Jeremy Cedendahl</h1>
+          <h2><img src="qwe.png" /></h2>
+          <div class="vertical-menu">
+            <a href="start.html">Home</a>
+            <a href="ommig.html">Om mig</a>
+            <a href="cv.html">CV</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="ovrigt.html" class="active">Övrigt</a>
+          </div>
+          <p><img src="icon.png" class="icon" /></p>
+        </div>
+      </div>
+      <div class="resumeright">
+        <!-- Lägg till Text och saker till höger-->
+        <h6 id="res">Klicka på hammaren pröva din värdighet</h6>
+        <img
+          id="easter" style="display:none"
+          src="https://c.tenor.com/Z6gmDPeM6dgAAAAM/dance-moves.gif"
+        /><img id="hammer" onclick="displayEaster()" src="thor.png" class="icon" />
+      </div>
+    </div>
+    <script>
+      function displayEaster(){
+        document.getElementById("hammer").style.display = "none"
+        document.getElementById("easter").style.display = "block"
+        document.getElementById("res").style.display = "none"
+        document.body.style.backgroundColor = "black"
+      }
+    </script>
+  </body>
+</html>
